@@ -25,7 +25,7 @@ Login.prototype.login = function (email,password)  {
 		if(email.value == user.email && password.value == user.password) {
 				login.push(user);
 				localStorage.setItem("login",JSON.stringify(login));
-				window.location.replace("file:///home/r-firdovsi/Desktop/Social-OOP/profile.html");
+				window.location.replace("https://r-firdovsi.github.io/loginAndRegistration---OOP/profile.html");
 			}
 	})
 
@@ -45,5 +45,5 @@ Login.prototype.profilePageLoad = function() {
 
 Login.prototype.logOutNow = function() {
 	localStorage.removeItem("login");
-	window.location.replace("file:///home/r-firdovsi/Desktop/Social-OOP/index.html");
+	window.location.replace("https://r-firdovsi.github.io/loginAndRegistration---OOP/index.html");
 };
