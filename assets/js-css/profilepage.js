@@ -12,7 +12,7 @@ const login = new Login();
 // addEventListener
 logOutBtn.addEventListener("click",logOut);
 editProfileBtn.addEventListener("click", function() {
-	window.location.replace("file:///home/r-firdovsi/Desktop/Social-OOP/profileedit.html");
+	window.location.replace("https://r-firdovsi.github.io/loginAndRegistration---OOP/profileedit.html");
 });
 
 
