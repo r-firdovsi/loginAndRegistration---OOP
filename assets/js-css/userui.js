@@ -11,7 +11,7 @@ let login = new Login();
 // addEventListener
 document.addEventListener("DOMContentLoaded", loadUserInfo);
 backButton.addEventListener("click",function() {
-	window.location.replace("file:///home/r-firdovsi/Desktop/Social-OOP/profile.html");
+	window.location.replace("https://r-firdovsi.github.io/loginAndRegistration---OOP/profile.html");
 });
 userInfoForm.addEventListener("submit",saveInfo);
 
