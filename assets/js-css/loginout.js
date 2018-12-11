@@ -22,7 +22,7 @@ Login.prototype.login = function (email,password)  {
 	
 	users.forEach(function(user) {
 		
-		if(email.value == user.email && password.value == user.password) {
+		if(email.value.toLowerCase() == user.email && password.value == user.password) {
 				login.push(user);
 				localStorage.setItem("login",JSON.stringify(login));
 				window.location.replace("https://r-firdovsi.github.io/loginAndRegistration---OOP/profile.html");
