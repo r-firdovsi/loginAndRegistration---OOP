@@ -7,20 +7,20 @@ let editProfileBtn = document.getElementById("editprofile");
 
 document.addEventListener("DOMContentLoaded", checkLogin);
 
-const login = new Login(profileArea);
+const login = new Login();
 
 // addEventListener
 logOutBtn.addEventListener("click",logOut);
-// editProfileBtn.addEventListener("click",editProfile);
+editProfileBtn.addEventListener("click", function() {
+	window.location.replace("file:///home/r-firdovsi/Desktop/Social-OOP/profileedit.html");
+});
 
 
 function checkLogin() {
-login.checkLogin();
+login.checkLogin(profileArea,document.getElementById("foralert"));
 }
 
-function editProfile() {
 
-};
 
 function logOut() {
 	login.logOutNow();

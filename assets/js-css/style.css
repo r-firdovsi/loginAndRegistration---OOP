@@ -58,6 +58,10 @@ h3 {
   font-family: 'Poppins', sans-serif;
 }
 
+.editprofile {
+  padding-left: 10px;
+}
+
 .form-signin {
   width: 100%;
 }

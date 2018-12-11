@@ -16,19 +16,34 @@
           <div class="card-body text-center">
           	<img src="assets/img/logo.png" id="logo">
           	<hr>
-          <section id="userinfo">
-            
-            </section> 
+            <div id="foralert">
+            <h3>Edit Profile Info</h3>
             <hr>
-            <button id="editprofile" class="btn btn-success">Back</button>
-            <button id="logout" class="btn btn-danger">Log Out</button>
+          <section id="userinfo">
+            <form id="userinfoform">
+            <input type="text" class="editprofile form-control" name="" placeholder="Name" required="">
+            <input type="text" class="editprofile form-control" name="" placeholder="Last Name" required="">
+            <input type="email" class="editprofile form-control" name="" placeholder="E-mail" required="">
+            <input type="password" class="editprofile form-control" name="" placeholder="Password" required="">
+            <hr>
+            </section> 
+            <!-- <hr> -->
+            <button id="back" class="btn btn-success">Back</button>
+            <button id="save" class="btn btn-danger" type="submit">Save</button>
+            </form>
           </div>
+        </div>
         </div>
       </div>
     </div>
   </div>
 
-<script type="text/javascript" src="assets/js-css/userui.js"></script>
+
+<script type="text/javascript" src="assets/js-css/alert.js"></script>
+<script type="text/javascript" src="assets/js-css/user.js"></script>
+<script type="text/javascript" src="assets/js-css/storage.js"></script>
+<script type="text/javascript" src="assets/js-css/loginout.js"></script>
 <script type="text/javascript" src="assets/js-css/userinfo.js"></script>
+<script type="text/javascript" src="assets/js-css/userui.js"></script>
 </body>
 </html>

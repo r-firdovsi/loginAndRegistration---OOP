@@ -2,7 +2,7 @@ function Storage() {
 
 };
 
-
+// Storage.prototype = User.prototype;
 
 Storage.prototype.addUserStorage = function(user) {
 	let users = this.getUserFromStorage();

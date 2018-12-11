@@ -16,7 +16,9 @@ const regButton = document.getElementById('registrbtn');
 const formForReg = document.getElementById("form-for-registration");
 let id = 0;
 
-const login = new Login(loginForm,loginForm);
+const login = new Login();
+
+document.addEventListener("DOMContentLoaded", checkLogin);
 
 // addEventListener
 loginForm.addEventListener("submit",loginNow);
@@ -24,8 +26,13 @@ regForm.addEventListener("submit",registration);
 
 
 function loginNow(e) {
-	login.login(loginInputEmail,loginInputPassword);
+	login.login(loginInputEmail,loginInputPassword,loginForm);
 	e.preventDefault();
+};
+
+
+function checkLogin() {
+login.checkLoginHomePage();
 };
 
 
@@ -33,8 +40,8 @@ function registration(e) {
 	id++;
 	const ui = new UI(regInputName,regInputLastName,regInputEmail,regInputPassword,id,formForReg,loginForm,profileArea);
 	ui.startRegistration();
+	// return id;
 	e.preventDefault();
-	return id;
 };
 
 

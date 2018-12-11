@@ -26,7 +26,7 @@ Alert.prototype.showAlert = function(alertArea,alertType,alertHead,alertMessage)
 	},3000);					  
 };
 
-Alert.prototype.showLoginAlert = function(alertArea,alertType,alertMessage) {
+Alert.prototype.showSimpleAlert = function(alertArea,alertType,alertMessage) {
 	const alert = document.createElement("div");
 	alert.className = `alert alert-${alertType}`;
 	alert.textContent = alertMessage;
