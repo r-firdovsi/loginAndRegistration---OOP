@@ -13,7 +13,7 @@ Login.prototype.checkLogin = function(profileArea,alertArea)  {
  									  Xais olunur profilinize daxil olun..
 									  </div>`;
 		setTimeout(function() {
-		window.location.replace("https://r-firdovsi.github.io/loginAndRegistration---OOP/index.html");	
+		window.location.replace("file:///home/r-firdovsi/Desktop/Social-OOP/index.html");	
 		},3000)							  
 	}
 };
@@ -22,7 +22,7 @@ Login.prototype.checkLoginHomePage = function() {
 	let checkLogin = this.checklogInOut();
 
 	if (checkLogin.length !== 0) {
-		window.location.replace("https://r-firdovsi.github.io/loginAndRegistration---OOP/profile.html");
+		window.location.replace("file:///home/r-firdovsi/Desktop/Social-OOP/profile.html");
 	}
 
 }
@@ -30,12 +30,16 @@ Login.prototype.checkLoginHomePage = function() {
 Login.prototype.checkLoginProEditPage = function(alertArea){
 	let checkLogin = this.checklogInOut();
 
+	if (checkLogin.length !== 0) {
+		user.loadUserInfo();
+	}else {
 	alertArea.innerHTML = `<div class="alert alert-danger" role="alert">
  									  Xais olunur profilinize daxil olun..
 									  </div>`;
 		setTimeout(function() {
 		window.location.replace("https://r-firdovsi.github.io/loginAndRegistration---OOP/index.html");	
-		},3000)				
+		},3000)	
+	}				
 }
 
 Login.prototype.login = function (email,password,alertArea)  {
@@ -48,7 +52,7 @@ Login.prototype.login = function (email,password,alertArea)  {
 		if(email.value.toLowerCase() == user.email && password.value == user.password) {
 				login.push(user);
 				localStorage.setItem("login",JSON.stringify(login));
-				window.location.replace("https://r-firdovsi.github.io/loginAndRegistration---OOP/profile.html");
+				window.location.replace("file:///home/r-firdovsi/Desktop/Social-OOP/profile.html");
 			}
 	})
 
@@ -68,5 +72,5 @@ Login.prototype.profilePageLoad = function(profileArea) {
 
 Login.prototype.logOutNow = function() {
 	localStorage.removeItem("login");
-	window.location.replace("https://r-firdovsi.github.io/loginAndRegistration---OOP/index.html");
+	window.location.replace("file:///home/r-firdovsi/Desktop/Social-OOP/index.html");
 };
