@@ -45,7 +45,7 @@ UI.prototype.registration = function() {
 
 	 		
 	 		setTimeout(function() {
-	 			window.location.replace("https://r-firdovsi.github.io/loginAndRegistration---OOP/profile.html");
+	 			window.location.replace(config.getConfig('profilPageUrl'));
 	 		},2000)
 };
 

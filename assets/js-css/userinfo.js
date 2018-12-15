@@ -16,6 +16,28 @@ Userinfo.prototype.loadUserInfo = function() {
 	this.inputForPassword.value = loginedUser[0].password;
 };
 
+Userinfo.prototype.checkEmail = function(setEmail,alertArea) {
+		let users = this.getUserFromStorage();
+		let login = this.checklogInOut();
+	 	let controle;
+
+	 	let userEmail = setEmail;
+
+	 users.forEach(function(user) {
+	 	if (user.email == userEmail.value && userEmail.value !== login[0].email) {
+	 		controle = true;
+	 	}
+	 	})
+
+	 	if (controle !== true) {
+	 		this.save();
+	 		alert.showSimpleAlert(alertArea,"success","Melumatlariniz Saxlanilmisdir..");
+	 	} else {
+	 		alert.showSimpleAlert(alertArea,"danger","Bu e-mail basqa bir istifadeciye mexsusudur..");
+	 		setEmail.focus();
+	 	} 
+};
+
 Userinfo.prototype.save = function() {
 	let loginedUser = this.checklogInOut();
 	let allUsers = this.getUserFromStorage();
@@ -23,7 +45,8 @@ Userinfo.prototype.save = function() {
 	let inputForLastname = this.inputForLastname;
 	let inputForEmail = this.inputForEmail;
 	let inputForPassword = this.inputForPassword;
-	let users = new User(this.inputForName.value,this.inputForLastname.value,this.inputForEmail.value,this.inputForPassword.value);
+
+	let users = new User(inputForName.value,inputForLastname.value,inputForEmail.value,inputForPassword.value);
 	
 	allUsers.forEach(function(user) {
 
@@ -31,7 +54,6 @@ Userinfo.prototype.save = function() {
 			allUsers.splice(allUsers.indexOf(user),1);
 			allUsers.push(users);
 			localStorage.setItem("users",JSON.stringify(allUsers));
-			console.log(localStorage);
 		};
 	})
 
