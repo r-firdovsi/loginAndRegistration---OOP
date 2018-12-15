@@ -1,5 +1,5 @@
 var config = {
-	enviorment : 'development',
+	enviorment : 'production',
 	production : {
 		indexPageUrl : "https://r-firdovsi.github.io/loginAndRegistration---OOP/index.html",
 		profilEditPageUrl : "https://r-firdovsi.github.io/loginAndRegistration---OOP/profileedit.html",
